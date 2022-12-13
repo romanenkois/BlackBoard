@@ -2,11 +2,12 @@
     outline: solid 1px red;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .promo {
     width: 100%;
     max-width: 1000px;
-}
-
-#nav .row div {
-    vertical-align: baseline;
 }
