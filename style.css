@@ -1,0 +1,12 @@
+* {
+    outline: solid 1px red;
+}
+
+.promo {
+    width: 100%;
+    max-width: 1000px;
+}
+
+#nav .row div {
+    vertical-align: baseline;
+}
