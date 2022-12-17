@@ -1,6 +1,6 @@
-*/:root {
-    -dark: #212529;
-    -light-gray: #BBBBBB
+:root {
+    --my-dark: #212529;
+    --light-gray: #dddddd;
 }
 
 * {
@@ -17,9 +17,14 @@ body {
     user-select: none;
 }
 
-#navmenu div {
-    background-color: var(-dark);
+#header {
+    background-color: var(--my-dark)!important;
 }
+
+#navmenu div {
+    background-color: var(--my-dark)!important;
+}
+
 
 #navmenu {
     display:none;
@@ -29,7 +34,7 @@ body {
     padding-top: 5px;
     padding-bottom: 5px; 
     width: 100%;
-    color: var(-light-gray);
+    color: var(--light-gray);
 }
 
 .navmenu-btn:hover .navmenu-btn:active {
@@ -40,11 +45,4 @@ body {
 .promo {
     width: 100%;
     max-width: 1000px;
-}
-
-
-
-#navmenu div {
-    --bs-bg-opacity:1;
-    background-color:rgba(var(--bs-dark-rgb))!important
 }
