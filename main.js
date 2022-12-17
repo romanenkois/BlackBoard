@@ -1,3 +1,11 @@
-function change_background() {
-    document.getElementById("profile").style.background="#111111"
+
+
+function get_menu() {
+    if (document.getElementById("navmenu").style.display=="block") {
+        document.getElementById("navmenu").style.display="none"
+        
+    }
+    else {
+        document.getElementById("navmenu").style.display="block"
+    }    
 }
