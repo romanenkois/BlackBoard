@@ -1,3 +1,8 @@
+*/:root {
+    -dark: #212529;
+    -light-gray: #BBBBBB
+}
+
 * {
     outline: solid 1px red;
 }
@@ -5,9 +10,41 @@
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
 }
+
+#nav {
+    user-select: none;
+}
+
+#navmenu div {
+    background-color: var(-dark);
+}
+
+#navmenu {
+    display:none;
+}
+
+.navmenu-btn {
+    padding-top: 5px;
+    padding-bottom: 5px; 
+    width: 100%;
+    color: var(-light-gray);
+}
+
+.navmenu-btn:hover .navmenu-btn:active {
+    color: #FFFFFF;
+}
+
 
 .promo {
     width: 100%;
     max-width: 1000px;
+}
+
+
+
+#navmenu div {
+    --bs-bg-opacity:1;
+    background-color:rgba(var(--bs-dark-rgb))!important
 }
