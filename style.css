@@ -1,16 +1,25 @@
 :root {
-    --my-dark: #212529;
+    --dark: #212529;
+    --darker: #111519;
     --light-gray: #dddddd;
 }
 
 * {
-    /*outline: solid 1px red;*/
+  /*outline: 1px red solid;*/
 }
 
 body {
     margin: 0;
     padding: 0;
     width: 100%;
+}
+a {
+    text-decoration: none;
+}
+
+.container {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 #nav {
@@ -21,13 +30,14 @@ body {
 }
 
 #header {
-    background-color: var(--my-dark)!important;
+    background-color: var(--dark);
 }
 
 #navmenu div {
-    background-color: var(--my-dark)!important;
+    background-color: var(--dark);
+    border-top: 2px solid var(--darker);
+    border-bottom: 2px solid var(--darker);
 }
-
 
 #navmenu {
     display:none;
@@ -47,5 +57,4 @@ body {
 
 .promo {
     width: 100%;
-    max-width: 1000px;
 }
