@@ -2,6 +2,8 @@
     --dark: #212529;
     --darker: #111519;
     --light-gray: #dddddd;
+    --primary: #ffd900;
+    --primary-hover: #ecbd00;
 }
 
 * {
@@ -50,11 +52,30 @@ a {
     color: var(--light-gray);
 }
 
+.navmenu-btn-main {
+    padding-top: 5px;
+    padding-bottom: 5px; 
+    width: 100%;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.navmenu-btn-main:hover {
+    color: var(--primary-hover);
+}
+
 .navmenu-btn:hover .navmenu-btn:active {
     color: #FFFFFF;
 }
 
-
 .promo {
     width: 100%;
+}
+
+.footer-text {
+    color: var(--light-gray);
+    opacity: 0.6;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0;
 }
