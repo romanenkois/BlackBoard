@@ -5,6 +5,7 @@ function get_menu() {
         document.getElementById("navmenu").style.display="none"
     }
     else {
+
         document.getElementById("navmenu").style.display="block"
     }
 }
