@@ -2,7 +2,7 @@
     --dark: #212529;
     --darker: #111519;
     --light-gray: #dddddd;
-    --light-gray-hover: #cccccc;
+    --light-gray-hover: #c0c0c0;
     --primary: #ffd900;
     --primary-hover: #ecbd00;
 }
@@ -101,10 +101,17 @@ a {
     background-color: var(--dark);
     color: var(--light-gray);
     user-select: none;
+    border-top: 2px solid var(--darker);
+    border-bottom: 2px solid var(--darker);
 }
 
 #filter h3 {
+    margin-top: 5px;
     color: var(--primary);
+}
+
+#filter h3:hover {
+    color: var(--primary-hover);
 }
 
 #filter p {
