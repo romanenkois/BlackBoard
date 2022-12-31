@@ -16,6 +16,7 @@ body {
     padding: 0;
     width: 100%;
 }
+
 a {
     text-decoration: none;
 }
@@ -43,7 +44,9 @@ a {
 }
 
 #navmenu {
-    display:none;
+    /*display:none;
+    transform: scale(0);
+    transition: .6s ease opacity,.6s ease transform;*/
 }
 
 .navmenu-btn {
@@ -69,14 +72,20 @@ a {
     color: #FFFFFF;
 }
 
-.promo {
-    width: 100%;
-}
-
 .footer-text {
     color: var(--light-gray);
     opacity: 0.6;
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 0;
+}
+/* index.html styles */
+
+.promo {
+    width: 100%;
+}
+
+#main-title1 div div {
+    margin-left: 5px;
+    margin-right: 5px;
 }
