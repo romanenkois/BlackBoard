@@ -47,6 +47,7 @@ a {
     /*display:none;
     transform: scale(0);
     transition: .6s ease opacity,.6s ease transform;*/
+    transition: all 2s linear;
 }
 
 .navmenu-btn {
@@ -88,4 +89,10 @@ a {
 #main-title1 div div {
     margin-left: 5px;
     margin-right: 5px;
+}
+
+/* clothes.html styles */
+
+#filter {
+    background-color: var(--dark);
 }
