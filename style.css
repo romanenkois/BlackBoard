@@ -33,6 +33,10 @@ a {
     user-select: none;
 }
 
+#header div span {
+    cursor: pointer;
+}
+
 #header {
     background-color: var(--dark);
 }
@@ -95,4 +99,28 @@ a {
 
 #filter {
     background-color: var(--dark);
+    color: var(--light-gray);
+    user-select: none;
+}
+
+#filter h3 {
+    color: var(--primary);
+}
+
+#filter p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    color: var(--light-gray);
+}
+
+#filter p:hover {
+    color: var(--light-gray-hover);
+}
+
+
+#filter2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    user-select: none;
 }
