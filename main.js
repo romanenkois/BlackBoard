@@ -11,10 +11,20 @@ function get_menu() {
             document.getElementById("navmenu").style.display="block"
         }
     } else {
-        if (document.getElementById("filter").style.display=="block") {
-            document.getElementById("filter").style.display="none"
-        } else {
+        if (document.getElementById("filter").style.display=="none") {
             document.getElementById("filter").style.display="block"
+        } else {
+            document.getElementById("filter").style.display="none"
         }
     }
+}
+function addProductType(productType) {
+    for (let i = 0; i < 3; i++) {
+        addProduct(productType, 1000);
+    }
+}
+
+function addProduct(productName, productPrice) {
+    document.getElementById("content").insertAdjacentHTML("beforeend",
+        `<div class="col-lg-4 col-6"> <img class="promo" src="promos/promo3.png" alt="image"><p>${productName}</p><p>${productPrice} грн</p></div>`);
 }
