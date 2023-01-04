@@ -21,6 +21,7 @@ function get_menu() {
     }
 }
 
+var productType = null;
 
 function addProductType(productType) {
     document.getElementById("products").innerHTML = "";
@@ -53,7 +54,13 @@ function addAllProducts() {
     );
 }
 
-function redirect_to_products(productType) {
+console.log(productType, "product_type1");
+
+function redirect_to_products(product_type) {
     self.location="clothes.html";
-    then(addProductType(productType));
+    console.log(product_type, "product_type2");
+    productType = product_type;
+    console.log(productType, "product_type3");
 }
+
+console.log(productType, "product_type4");
