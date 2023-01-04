@@ -1,30 +1,59 @@
-
-
 function get_menu() {
     var filterExists = document.getElementById("filter");
     if(filterExists == null){
         if (document.getElementById("navmenu").style.display=="block") {
-            document.getElementById("navmenu").style.display="none"
+            document.getElementById("navmenu").style.display="none";
+            document.getElementById("menubtn").style.color="var(--light-gray)";
         }
         else {
-
-            document.getElementById("navmenu").style.display="block"
+            document.getElementById("navmenu").style.display="block";
+            document.getElementById("menubtn").style.color="var(--light-gray-hover)";
         }
+
     } else {
         if (document.getElementById("filter").style.display=="none") {
-            document.getElementById("filter").style.display="block"
+            document.getElementById("filter").style.display="block";
+            document.getElementById("menubtn").style.color="var(--light-gray-hover)";
         } else {
-            document.getElementById("filter").style.display="none"
+            document.getElementById("filter").style.display="none";
+            document.getElementById("menubtn").style.color="var(--light-gray)";
         }
     }
 }
+
+
 function addProductType(productType) {
-    for (let i = 0; i < 3; i++) {
-        addProduct(productType, 1000);
-    }
+    document.getElementById("products").innerHTML = "";
+        fetch("products.json")
+        .then(response => response.json())
+        .then(json => {
+            for (let i = 0; i < json.products.length; i++) {
+                if (json.products[i].product_type == productType) {
+                    addProduct(json.products[i].name, json.products[i].price);
+                }
+            }
+        }
+    );
 }
 
 function addProduct(productName, productPrice) {
-    document.getElementById("content").insertAdjacentHTML("beforeend",
-        `<div class="col-lg-4 col-6"><a href="product.html"><img class="promo" src="promos/promo3.png" alt="image"></a><p>${productName}</p><p>${productPrice} грн</p></div>`);
+    document.getElementById("products").insertAdjacentHTML("beforeend",
+        `<div class="col-lg-4 col-6 product"><a href="product.html"><img class="promo" src="promos/promo3.png" alt="image"></a><p class="product-name">${productName}</p><p class="product-price">${productPrice} грн</p></div>`);
+}
+
+function addAllProducts() {
+    document.getElementById("products").innerHTML = "";
+    fetch("products.json")
+        .then(response => response.json())
+        .then(json => {
+            for (let i = 0; i < json.products.length; i++) {
+                addProduct(json.products[i].name, json.products[i].price);
+            }
+        }
+    );
+}
+
+function redirect_to_products(productType) {
+    self.location="clothes.html";
+    then(addProductType(productType));
 }
