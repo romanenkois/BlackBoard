@@ -19,10 +19,10 @@
         <div id="nav" class="container-fluid text-white">
             <div id="header" class="row">
                 <div class="col-2 col-lg-1 text-center align-self-center">
-                    <span id="menubtn" class="text-white material-symbols-outlined" onclick="get_menu()">menu</span>
+                    <span id="menubtn" class="material-symbols-outlined" onclick="get_menu()">menu</span>
                 </div>
                 <div class="col-2 col-lg-1 text-center align-self-center">
-                    <span class="text-white material-symbols-outlined">search</span>
+                    <span id="search-btn" class="text-white material-symbols-outlined">search</span>
                 </div>
 
                 <div class="col-4 col-lg-8 text-center align-self-center">
@@ -33,35 +33,32 @@
 
                 <div class="col-2 col-lg-1 text-center align-self-center">
                     <a href="#">
-                        <span class="text-white material-symbols-outlined ">shopping_cart</span>
+                        <span id="shopping-cart" class="text-white material-symbols-outlined ">shopping_cart</span>
                     </a>
                 </div>
                 <div class="col-2 col-lg-1 text-center align-self-center">
                     <a href="#">
-                        <span class="text-white material-symbols-outlined">person</span>
+                        <span id="account" class="text-white material-symbols-outlined">person</span>
                     </a>
                 </div>
             </div>
             
             <div id="navmenu" style="display: none">
                 <div class="row text-center">
-                    <a class="col-12 col-lg navmenu-btn-main" href="clothes.html" >
+                    <a class="col-12 col-md navmenu-btn-main" href="clothes.html" >
                         Одяг
                     </a>
-                    <div class="col-12 col-lg navmenu-btn">
-                        худі
+                    <div class="col-12 col-md navmenu-btn" onclick="redirect_to_products('zipka')">
+                        зіпки
                     </div>
-                    <div class="col-12 col-lg navmenu-btn">
+                    <div class="col-12 col-md navmenu-btn" onclick="redirect_to_products('t-shirt')">
                         футболки
                     </div>
-                    <div class="col-12 col-lg navmenu-btn">
+                    <div class="col-12 col-md navmenu-btn" onclick="redirect_to_products('pants')">
                         штани
                     </div>
-                    <div class="col-12 col-lg navmenu-btn">
+                    <div class="col-12 col-md navmenu-btn" onclick="redirect_to_products('scarf')">
                         шарфи
-                    </div>
-                    <div class="col-12 col-lg navmenu-btn">
-                        шапки
                     </div>
                 </div>
             </div>
