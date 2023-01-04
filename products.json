@@ -1,57 +1,69 @@
 {
     "products":[
         {
-            "product_id":1,
+            "product_id": "01001",
             "name": "Чорна куртка",
-            "price":100,
+            "price": 4999,
             "product_type": "jacket"
         },
         {
-            "product_id":2,
+            "product_id": "01002",
             "name": "Біла куртка",
-            "price":200,
+            "price": 4999,
             "product_type": "jacket"
         },
         {
-            "product_id":3,
+            "product_id": "01003",
             "name": "Куртка аніме тян",
-            "price":300,
-            "product_type":" jacket"
+            "price": 5999,
+            "product_type": "jacket"
         },
         {
-            "product_id":4,
+            "product_id": "02001",
+            "name": "Зіпка з старзами",
+            "price": 3499,
+            "product_type": "zipka"
+        },
+        {
+            "product_id": "02002",
+            "name": "Зіпка дискорд модератор",
+            "price": 3499,
+            "product_type": "zipka"
+        },
+        {
+            "product_id": "03001",
             "name": "Чорний худі",
-            "price":100,
+            "price": 2999,
             "product_type": "hoodie"
         },
         {
-            "product_id":6,
+            "product_id": "03002",
             "name": "Худі сакури",
-            "price":300,
+            "price": 3499,
             "product_type": "hoodie"
         },
         {
             "product_id":7,
             "name": "Чорна футболка",
-            "price":100,
+            "price": 999,
             "product_type": "t-shirt"
         },
         {
             "product_id":8,
             "name": "Біла футболка",
-            "price":200,
+            "price": 999,
             "product_type": "t-shirt"
         },
         {
             "product_id":9,
             "name": "Футболка аніме тян",
-            "price":300,
+            "price": 1499,
             "product_type": "t-shirt"
         },
         {
             "product_id":10,
             "name": "Футболка сакури",
-            "price":300,
+            "price": 1499,
             "product_type": "t-shirt"
         } 
     ]
