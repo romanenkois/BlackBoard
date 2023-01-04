@@ -19,10 +19,10 @@
         <div id="nav" class="container-fluid text-white">
             <div id="header" class="row">
                 <div class="col-2 col-lg-1 text-center align-self-center">
-                    <span id="menubtn" class="text-white material-symbols-outlined" onclick="get_menu()">menu</span>
+                    <span id="menubtn" class="material-symbols-outlined" onclick="get_menu()">menu</span>
                 </div>
                 <div class="col-2 col-lg-1 text-center align-self-center">
-                    <span class="text-white material-symbols-outlined">search</span>
+                    <span id="search-btn" class="text-white material-symbols-outlined">search</span>
                 </div>
 
                 <div class="col-4 col-lg-8 text-center align-self-center">
@@ -33,15 +33,15 @@
 
                 <div class="col-2 col-lg-1 text-center align-self-center">
                     <a href="#">
-                        <span class="text-white material-symbols-outlined ">shopping_cart</span>
+                        <span id="shopping-cart" class="text-white material-symbols-outlined ">shopping_cart</span>
                     </a>
                 </div>
                 <div class="col-2 col-lg-1 text-center align-self-center">
                     <a href="#">
-                        <span class="text-white material-symbols-outlined">person</span>
+                        <span id="account" class="text-white material-symbols-outlined">person</span>
                     </a>
                 </div>
-            </div>
+        </div>
             
             <div id="navmenu" style="display: none">
                 <div class="row text-center">
@@ -49,7 +49,7 @@
                         Одяг
                     </a>
                     <div class="col-12 col-lg navmenu-btn">
-                        худі
+                        зіпки
                     </div>
                     <div class="col-12 col-lg navmenu-btn">
                         футболки
@@ -60,23 +60,35 @@
                     <div class="col-12 col-lg navmenu-btn">
                         шарфи
                     </div>
-                    <div class="col-12 col-lg navmenu-btn">
-                        шапки
-                    </div>
                 </div>
             </div>
         </div>
 
+        <br>
+
         <div class="div container-fluid">
-            <div class="row">
-                <div class="col-lg-3 text-center align-self-center">
-                    <h3>Альтушк момент</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+                    <h3 class="product-name">Шарф аніме тян на трубах</h3>
                 </div>
-                <div class="col-lg-9">
-                    <img class="promo" src="promos/promo.png">
+                <div class="col-12 col-md-2">
+                    <!--empty space-->
+                </div>
+            </div>
+            <br>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6"><img class="promo" src="promos/promo2.jpg" alt="img">
+                </div>
+                <div id="product-info"class="col-12 col-md-3">
+                    <p>Склад: 100% котон</p>
+                    <p class="product-price">3999 грн</p>
+                    <div id="buy-btn"">додати в кошик</div>
                 </div>
             </div>
         </div>
+
+        <br>
 
         <footer>
             <div class="container-fluid bg-dark">
