@@ -68,8 +68,8 @@
             <div class="row justify-content-center">
                 <div id="filter" class="col-lg-2 col-12">
                     <h3 onclick="addAllProducts()">Тянко одяг</h3>
-                    <p onclick="addProduct('jacket')">куртки</p>
-                    <p onclick="addProduct('zipka')">зіпки</p>
+                    <p onclick="addProductType('jacket')">куртки</p>
+                    <p onclick="addProductType('zipka')">зіпки</p>
                     <p onclick="addProductType('hoodie')">худі</p>
                     <p onclick="addProductType('t-shirt')">футболки</p>
                     <p onclick="addProductType('shirt')">сорочки</p>
@@ -105,7 +105,14 @@
 
         </footer>
         <script>
-            
+            console.log(productType, "productType10")
+            if (productType == null) {
+                addAllProducts();
+            }
+            else {
+                addProductType(productType);                
+            }
+            productType = null;
         </script>
     </body>
 </html>
