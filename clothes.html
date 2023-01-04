@@ -19,10 +19,10 @@
         <div id="nav" class="container-fluid text-white">
             <div id="header" class="row">
                 <div class="col-2 col-lg-1 text-center align-self-center">
-                    <span id="menubtn" class="text-white material-symbols-outlined" onclick="get_menu()">menu</span>
+                    <span id="menubtn" class="material-symbols-outlined" onclick="get_menu()">menu</span>
                 </div>
                 <div class="col-2 col-lg-1 text-center align-self-center">
-                    <span class="text-white material-symbols-outlined">search</span>
+                    <span id="search-btn" class="text-white material-symbols-outlined">search</span>
                 </div>
 
                 <div class="col-4 col-lg-8 text-center align-self-center">
@@ -33,12 +33,12 @@
 
                 <div class="col-2 col-lg-1 text-center align-self-center">
                     <a href="#">
-                        <span class="text-white material-symbols-outlined ">shopping_cart</span>
+                        <span id="shopping-cart" class="text-white material-symbols-outlined ">shopping_cart</span>
                     </a>
                 </div>
                 <div class="col-2 col-lg-1 text-center align-self-center">
                     <a href="#">
-                        <span class="text-white material-symbols-outlined">person</span>
+                        <span id="account" class="text-white material-symbols-outlined">person</span>
                     </a>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                         штани
                     </div>
                     <div class="col-12 col-lg navmenu-btn">
-                        шапки
+                        шарфи
                     </div>
                 </div>
             </div>
@@ -67,17 +67,16 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div id="filter" class="col-lg-2 col-12">
-                    <h3 onclick="addProductType('худі', 1000)">Тянко одяг</h3>
-                    <p onclick="addProduct('Куртка', 4999)">куртки</p>
-                    <p onclick="addProduct('Зіпка', 3499)">зіпки</p>
-                    <p>худі</p>
-                    <p>футболки</p>
-                    <p>сорочки</p>
-                    <p>реглани</p>
-                    <p>штани</p>
-                    <p>шарфи</p>
-                    <p>шапки</p>
-                    <p>кепки</p>
+                    <h3 onclick="addAllProducts()">Тянко одяг</h3>
+                    <p onclick="addProduct('jacket')">куртки</p>
+                    <p onclick="addProduct('zipka')">зіпки</p>
+                    <p onclick="addProductType('hoodie')">худі</p>
+                    <p onclick="addProductType('t-shirt')">футболки</p>
+                    <p onclick="addProductType('shirt')">сорочки</p>
+                    <p onclick="addProductType('sweater')">светри</p>
+                    <p onclick="addProductType('pants')">штани</p>
+                    <p onclick="addProductType('scarf')">шарфи</p>
+                    <p onclick="addProductType('cap')">шапки</p>
                 </div>
 
                 <div id="left-window" class="col-lg-10 col-12 text-center">
@@ -86,12 +85,8 @@
                         <div class="col-lg-2 col-4">сортувати за ціною</div>
                         <div class="col-lg-2 col-4">сортувати за розміром</div>
                     </div>
-                    <div id="content" class="row">
-                        <div id="product" class="col-lg-4 col-6">
-                            <a href="product.html"><img class="promo" src="promos/promo3.png" alt="image"></a>
-                            <p>Куртка</p>
-                            <p>1000 грн</p>
-                        </div>
+                    <div id="products" class="row">
+                        <!--Products appear here-->
                     </div>
                 </div>
             </div>
