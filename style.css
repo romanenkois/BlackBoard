@@ -12,11 +12,11 @@
     background-color: var(--primary);
     color: var(--dark);
 }
-
+/*
 * {
-  /*outline: 1px red solid;*/
+  outline: 1px red solid;
 }
-
+*/
 body {
     margin: 0;
     padding: 0;
