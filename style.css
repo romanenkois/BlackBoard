@@ -31,6 +31,15 @@ img {
     user-select: none;
 }
 
+p {
+    color: var(--dark);
+}
+
+h1 {
+    color: var(--dark);
+    font-weight: 700;
+}
+
 .container {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -195,3 +204,16 @@ img {
 
 /* cart.html styles */
 
+/* 404.html styles */
+
+.link {
+    padding:5px;
+    font-weight: 550;
+    background-color: var(--dark);
+    color: var(--primary);
+    user-select: none;
+}
+
+.link:hover {
+    color: var(--primary-hover);
+}
