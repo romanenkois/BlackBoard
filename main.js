@@ -1,6 +1,5 @@
 function get_menu() {
-    var filterExists = document.getElementById("filter");
-    if(filterExists == null){
+    if(document.getElementById("filter") == null){
         if (document.getElementById("navmenu").style.display=="block") {
             document.getElementById("navmenu").style.display="none";
             document.getElementById("menubtn").style.color="var(--light-gray)";
