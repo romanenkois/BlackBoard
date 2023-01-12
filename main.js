@@ -38,7 +38,7 @@ function addProductType(productType) {
 
 function addProduct(productName, productPrice) {
     document.getElementById("products").insertAdjacentHTML("beforeend",
-        `<div class="col-lg-4 col-6 product"><a href="product.html"><img class="promo" src="promos/promo3.png" alt="image"></a><p class="product-name">${productName}</p><p class="product-price">${productPrice} грн</p></div>`);
+        `<div class="col-lg-4 col-6 product"><a href="product.html"><img class="promo" src="images/promos/promo3.png" alt="image"></a><p class="product-name">${productName}</p><p class="product-price">${productPrice} грн</p></div>`);
 }
 
 function addAllProducts() {
