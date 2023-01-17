@@ -41,26 +41,6 @@
                     </a>
                 </div>
             </div>
-            
-            <div id="navmenu" style="display: none;">
-                <div class="row text-center">
-                    <a class="col-12 col-lg navmenu-btn-main" href="clothes.html" >
-                        Одяг
-                    </a>
-                    <div class="col-12 col-lg navmenu-btn">
-                        зіпки
-                    </div>
-                    <div class="col-12 col-lg navmenu-btn">
-                        футболки
-                    </div>
-                    <div class="col-12 col-lg navmenu-btn">
-                        штани
-                    </div>
-                    <div class="col-12 col-lg navmenu-btn">
-                        шарфи
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="container-fluid">
@@ -70,7 +50,7 @@
                     <p onclick="addProductType('jacket')">куртки</p>
                     <p onclick="addProductType('zipka')">зіпки</p>
                     <p onclick="addProductType('hoodie')">худі</p>
-                    <p onclick="addProductType('t-shirt')">футболки</p>
+                    <p onclick="addProductType('tshirt')">футболки</p>
                     <p onclick="addProductType('shirt')">сорочки</p>
                     <p onclick="addProductType('sweater')">светри</p>
                     <p onclick="addProductType('pants')">штани</p>
@@ -104,8 +84,15 @@
 
         </footer>
         
-
-        <script src="main.js"></script>
-        <script>addAllProducts();</script>
+        <script src="archive/jquery-3.6.3.js"></script>
+        <script src="js/navmenu.js"></script>
+        <script src="js/products.js"></script>
+        <script>
+            var filter = (location.href.substring(location.href.lastIndexOf('?') + 1));
+            var filt = (filter.split("="))
+            if (filt[1] != null) {
+                addProductType(filt[1])
+            }
+        </script>
     </body>
 </html>
