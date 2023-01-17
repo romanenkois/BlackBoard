@@ -43,28 +43,76 @@
             "product_type": "hoodie"
         },
         {
-            "product_id":7,
+            "product_id": "04001",
             "name": "Чорна футболка",
             "price": 999,
-            "product_type": "t-shirt"
+            "product_type": "tshirt"
         },
         {
-            "product_id":8,
+            "product_id": "04002",
             "name": "Біла футболка",
             "price": 999,
-            "product_type": "t-shirt"
+            "product_type": "tshirt"
         },
         {
-            "product_id":9,
+            "product_id": "04003",
             "name": "Футболка аніме тян",
             "price": 1499,
-            "product_type": "t-shirt"
+            "product_type": "tshirt"
         },
         {
-            "product_id":10,
+            "product_id": "04004",
             "name": "Футболка сакури",
             "price": 1499,
-            "product_type": "t-shirt"
-        } 
+            "product_type": "tshirt"
+        },
+        {
+            "product_id": "05001",
+            "name": "Сорочка панка з гітарой",
+            "price": 1999,
+            "product_type": "shirt"
+        },
+        {
+            "product_id": "06001",
+            "name": "Колючий потворний світер",
+            "price": 199,
+            "product_type": "sweater"
+        },
+        {
+            "product_id": "06002",
+            "name": "Світер чорний гуль",
+            "price": 2499,
+            "product_type": "sweater"
+        },
+        {
+            "product_id": "07001",
+            "name": "Джогери забівні",
+            "price": 1499,
+            "product_type": "pants"
+        },
+        {
+            "product_id": "07002",
+            "name": "Штани широкі скейтерські",
+            "price": 6999,
+            "product_type": "pants"
+        },
+        {
+            "product_id": "08001",
+            "name": "Теплий 2д шарф з тянкой",
+            "price": 799,
+            "product_type": "scarf"
+        },
+        {
+            "product_id": "08002",
+            "name": "Шарф Едгара бравл старс",
+            "price": 1199,
+            "product_type": "scarf"
+        },
+        {
+            "product_id": "09001",
+            "name": "Кепка легенда обухівського лісу",
+            "price": 899,
+            "product_type": "cap"
+        }
     ]
 }
