@@ -176,6 +176,12 @@ h1 {
 }
 
 /* product.html styles */
+#product-img {
+    max-width: 1000px;
+    max-height: 1000px;
+    object-fit: contain;
+}
+
 #product-info-div {
     margin-top:auto;
     margin-bottom:auto;
@@ -184,7 +190,6 @@ h1 {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
 
 #product-info-div p {
     margin-top: 10px;
