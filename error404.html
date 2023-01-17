@@ -12,7 +12,6 @@
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
             <link rel="stylesheet" href="style.css">
-            <script src="main.js"></script>
         </head>
     <body>
 
@@ -48,16 +47,16 @@
                     <a class="col-12 col-md navmenu-btn-main" href="clothes.html" >
                         Одяг
                     </a>
-                    <div class="col-12 col-md navmenu-btn" onclick="redirect_to_products('zipka')">
+                    <div id="nav-zipka" class="col-12 col-md navmenu-btn">
                         зіпки
                     </div>
-                    <div class="col-12 col-md navmenu-btn" onclick="redirect_to_products('t-shirt')">
+                    <div id="nav-tshirt" class="col-12 col-md navmenu-btn">
                         футболки
                     </div>
-                    <div class="col-12 col-md navmenu-btn" onclick="redirect_to_products('pants')">
+                    <div id="nav-pants" class="col-12 col-md navmenu-btn">
                         штани
                     </div>
-                    <div class="col-12 col-md navmenu-btn" onclick="redirect_to_products('scarf')">
+                    <div id="nav-scarf" class="col-12 col-md navmenu-btn">
                         шарфи
                     </div>
                 </div>
@@ -82,5 +81,7 @@
                 </div>
             </div>
         </footer>
+
+        <script src="js/navmenu.js"></script>
     </body>
 </html>
