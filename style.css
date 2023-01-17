@@ -130,14 +130,15 @@ h1 {
 
 #filter h3 {
     margin-top: 5px;
-    color: var(--primary);
+    color: var(--primary)!important;
 }
 
 #filter h3:hover {
-    color: var(--primary-hover);
+    color: var(--primary-hover)!important;
 }
 
-#filter p {
+#filter a {
+    display: block;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 10px;
