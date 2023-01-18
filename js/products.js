@@ -1,8 +1,17 @@
 
 function addProduct(productId, productName, productPrice) {
-    document.getElementById("products").insertAdjacentHTML("beforeend",
-        `<div class="col-lg-4 col-6 product"><a href="product.html?${productId}"><img class="promo" src="images/promos/promo3.png" alt="image"></a><p class="product-name">${productName}</p><p class="product-price">${productPrice} грн</p></div>`);
-}
+    fetch(`images/products/${productId}/${productId}main.png`, { method: 'HEAD' })
+    .then(res => {
+        if (res.ok) {
+            productImage = `images/products/${productId}/${productId}main.png`
+        } else {
+            productImage = `images/promos/promo3.png`
+        }
+        document.getElementById("products").insertAdjacentHTML("beforeend",
+        `<div class="col-lg-4 col-6 product"><a href="product.html?${productId}"><img class="promo" src="${productImage}" alt="image"></a><p class="product-name">${productName}</p><p class="product-price">${productPrice} грн</p></div>`);
+    })
+    .catch(err => console.log('Error:', err))
+    }
 
 function addProductType(productType) {
     document.getElementById("products").innerHTML = "";
