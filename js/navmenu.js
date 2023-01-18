@@ -1,5 +1,8 @@
-function get_menu() {
-    if(document.getElementById("filter") == null){
+var menuBtn = document.querySelector("#menubtn")
+var urlLocation = ((location.href.substring(location.href.lastIndexOf('/') + 1).split("?"))[0])
+
+menuBtn.addEventListener("click", function(){
+    if (urlLocation != "clothes.html") {
         if (document.getElementById("navmenu").style.display=="block") {
             document.getElementById("navmenu").style.display="none";
             document.getElementById("menubtn").style.color="var(--light-gray)";
@@ -8,7 +11,6 @@ function get_menu() {
             document.getElementById("navmenu").style.display="block";
             document.getElementById("menubtn").style.color="var(--light-gray-hover)";
         }
-
     } else {
         if (document.getElementById("filter").style.display=="none") {
             document.getElementById("filter").style.display="block";
@@ -18,9 +20,10 @@ function get_menu() {
             document.getElementById("menubtn").style.color="var(--light-gray)";
         }
     }
-}
 
-if (document.nodeName != "product.html") {
+})
+
+if (urlLocation != "clothes.html") {
     navZipka = document.querySelector("#nav-zipka");
     navTshirt = document.querySelector("#nav-tshirt");
     navPants = document.querySelector("#nav-pants");
