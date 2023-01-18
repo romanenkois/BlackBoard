@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <div class="container-fluid">
+        <div id="content" class="container-fluid">
             <div class="row justify-content-center">
                 <div id="filter" class="col-lg-2 col-12">
                     <a href='clothes.html' style="margin-left: 0;"><h3>Тянко одяг </h3></a>
@@ -95,6 +95,9 @@
             } else {
                 addAllProducts()
             }
+        </script>
+        <script>
+            document.getElementById("content").style.minHeight = window.outerHeight
         </script>
     </body>
 </html>
