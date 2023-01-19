@@ -13,8 +13,8 @@
 
             <link rel="stylesheet" href="style.css">
         </head>
+        
     <body>
-
         <div id="nav" class="container-fluid text-white">
             <div id="header" class="row">
                 <div class="col-2 col-lg-1 text-center align-self-center">
@@ -31,36 +31,50 @@
                 </div>
 
                 <div class="col-2 col-lg-1 text-center align-self-center">
-                    <a href="#">
-                        <span id="shopping-cart" class="text-white material-symbols-outlined ">shopping_cart</span>
-                    </a>
+                    <span id="shopping-cart-btn" class="text-white material-symbols-outlined ">shopping_cart</span>
                 </div>
                 <div class="col-2 col-lg-1 text-center align-self-center">
                     <a href="#">
-                        <span id="account" class="text-white material-symbols-outlined">person</span>
+                        <span id="account-btn" class="text-white material-symbols-outlined">person</span>
                     </a>
                 </div>
             </div>
             
             <div id="navmenu" style="display: none">
                 <div class="row text-center">
-                    <a class="col-12 col-md navmenu-btn-main" href="clothes.html" >
-                        Одяг
-                    </a>
+                    <div id="nav-zipka" class="col-12 col-md navmenu-btn navmenu-btn-main">
+                        <a href="clothes.html" >
+                            Одяг
+                        </a>
+                    </div>
                     <div id="nav-zipka" class="col-12 col-md navmenu-btn">
-                        зіпки
+                        <a href="clothes.html?category=zipka">
+                            зіпки
+                        </a>
                     </div>
                     <div id="nav-tshirt" class="col-12 col-md navmenu-btn">
-                        футболки
+                        <a href="clothes.html?category=tshirt">
+                            футболки
+                        </a>
                     </div>
                     <div id="nav-pants" class="col-12 col-md navmenu-btn">
-                        штани
+                        <a href="clothes.html?category=pants">
+                            штани
+                        </a>
                     </div>
                     <div id="nav-scarf" class="col-12 col-md navmenu-btn">
-                        шарфи
+                        <a href="clothes.html?category=scarf">
+                            шарфи
+                        </a>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div id="shoping-cart" style="display: none">
+            <h3>Корзина</h3>
+            <p>поки тут пусто</p>
+            <p>перейти до оплати</p>
         </div>
 
         <div class="container text-center" style="margin-top: auto; margin-bottom: auto;">
