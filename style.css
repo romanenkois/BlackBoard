@@ -216,13 +216,32 @@ h1 {
     position: fixed;
     right: 0;
     z-index: 10;
-    width: 200px;
-    background-color: var(--primary-hover);
+    margin: 0;
+}
+
+#shopping-cart-content {
+    background-color: var(--primary);
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    z-index: 10;
+    margin: 0;
+}
+
+.shopping-cart-product {
+    background-color: #FFFFFF;
+    color: var(--dark);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    margin: 5px 0px 10px 0px;
+    padding: 5px;
 }
 
 /* 404.html styles */
 
 .link {
+    margin: 5px 0px 5px 0px;
     padding:5px;
     font-weight: 550;
     background-color: var(--dark);
