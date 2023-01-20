@@ -247,6 +247,7 @@ h1 {
     background-color: var(--dark);
     color: var(--primary);
     user-select: none;
+    text-align: center
 }
 
 .link:hover {
