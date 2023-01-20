@@ -6,13 +6,12 @@ if (urlLocation == "product.html") {
     var productId = (location.href.substring(location.href.lastIndexOf('?') + 1));
 
     buyBtn.addEventListener("click", function() {
-        existingCart = JSON.parse(localStorage.getItem("shopingCart"));
+        existingCart = JSON.parse(localStorage.getItem("shoppingCart"));
         let newCart = []
         let alredyAdded = false
 
         if (existingCart != null) {
             for (let i = 0; i < existingCart.length; i++) {
-                console.log(existingCart[i].product_id)
 
                 if (existingCart[i].product_id == productId) {
                     existingCart[i].product_quantity += 1
@@ -27,7 +26,10 @@ if (urlLocation == "product.html") {
         if (alredyAdded != true) {
             newCart.push(({product_id: productId, product_quantity: 1}))
         }
-        localStorage.setItem("shopingCart", JSON.stringify(newCart))
+        localStorage.setItem("shoppingCart", JSON.stringify(newCart))
+        if (document.querySelector("#shoping-cart").style.display == "block") {
+            shoppingCartRender()
+        }
     })
 }
 
