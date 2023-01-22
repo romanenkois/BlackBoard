@@ -71,6 +71,7 @@ function shoppingCartRender() {
         }
     } else {
         document.getElementById("shopping-cart-products").insertAdjacentHTML("beforeend","<p class='shopping-cart-product' style='text-align: center' >Поки тут пусто</p>")
+        document.getElementById("purchase-btn").style.display = "none";
     }
 }
 
