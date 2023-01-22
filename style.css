@@ -7,6 +7,8 @@
     --light-gray-dark: #a0a0a0;
     --primary: #ffd900;
     --primary-hover: #ecbd00;
+    --green: #45d174;
+    --red: #e25353;
 }
 
 ::selection {
@@ -73,7 +75,6 @@ h1 {
     cursor: pointer;
 }
 
-
 .navmenu-btn {
     padding-top: 5px;
     padding-bottom: 5px; 
@@ -98,12 +99,28 @@ h1 {
     color: #FFFFFF;
 }
 
+#brand-name {
+    display: block;
+    color: #FFFFFF;
+    margin: auto;
+}
+
+#brand-name h1 {
+    color: #FFFFFF;
+}
+
+
 .footer-text {
     color: var(--light-gray-dark);
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 0;
 }
+
+ #search-field {
+    width: 100%;
+ }
+
 /* index.html styles */
 
 .promo {
@@ -213,19 +230,23 @@ h1 {
 /* cart.html styles */
 
 #shoping-cart {
+    color: var(--light-gray);
     position: fixed;
     right: 0;
     z-index: 10;
     margin: 0;
+    
 }
 
 #shopping-cart-content {
-    background-color: var(--primary);
+    background-color: var(--dark);
     padding: 20px;
     position: fixed;
     right: 0;
     z-index: 10;
     margin: 0;
+    border-top: 2px solid var(--darker);
+    border-bottom: 4px solid var(--darker);
 }
 
 .shopping-cart-product {
@@ -233,9 +254,46 @@ h1 {
     color: var(--dark);
     margin-top: 5px;
     margin-bottom: 5px;
-    border-radius: 5px;
+    border-radius: 2px;
     margin: 5px 0px 10px 0px;
     padding: 5px;
+}
+
+.add-product {
+    text-align: center;
+    font-weight: 900;
+    color: var(--darker);
+    background-color: var(--green);
+    border-radius: 2px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.minus-product {
+    text-align: center;
+    font-weight: 900;
+    color: var(--darker);
+    background-color: var(--red);
+    border-radius: 2px;
+    user-select: none;
+    cursor: pointer;
+}
+
+#purchase-btn {
+    margin: 10px auto;
+    padding: 10px 20px 10px 20px;
+    width: 100%;
+    text-align: center;
+    font-weight: 550;
+    background-color: var(--primary);
+    color: var(--dark);
+    user-select: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+#purchase-btn:hover {
+    background-color: var(--primary-hover);
 }
 
 /* 404.html styles */
