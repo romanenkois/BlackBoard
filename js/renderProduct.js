@@ -1,27 +1,6 @@
 var productId = (location.href.substring(location.href.lastIndexOf('?') + 1));
 
-function checkIfProductExists(productId) {
-    var productExists = false;
-    fetch("products.json")
-    .then(response => response.json())
-    .then(json => {
-        for (let i = 0; i < json.products.length; i++) {
-            if (json.products[i].product_id == productId) {
-                productExists = true;
-            }
-        }
-        console.log(productExists);
-        return productExists;
-    });
-    
-}
-
-function checkIfImageExists(productId) {
-
-}
-
 function renderProduct(productId) {
-    console.log("я лох");
     fetch("products.json")
     .then(response => response.json())
     .then(json => {
@@ -45,5 +24,27 @@ function renderProduct(productId) {
         }
     })
 }
-    
-renderProduct(productId)
+
+async function checkIfProductExists(productIdFunc) {
+    let myPromise = new Promise(function(resolve) {
+        var productExists = false;
+        fetch("products.json")
+        .then(response => response.json())
+        .then(json => {
+            for (let i = 0; i < json.products.length; i++) {
+                if (json.products[i].product_id == productIdFunc) {
+                    productExists = true;
+                }
+            }
+            resolve(productExists);
+        });
+    })
+    let productExists = await myPromise;
+    if (productExists == true) {
+        renderProduct(productId);
+    } else {
+        location.href = "error404.html";
+    }
+}
+
+checkIfProductExists(productId);
