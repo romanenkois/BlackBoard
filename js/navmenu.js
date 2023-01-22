@@ -1,4 +1,5 @@
 var menuBtn = document.querySelector("#menubtn")
+var searchBtn = document.querySelector("#search-btn")
 var cartBtn = document.querySelector("#shopping-cart-btn")
 var urlLocation = ((location.href.substring(location.href.lastIndexOf('/') + 1).split("?"))[0])
 
@@ -24,6 +25,17 @@ menuBtn.addEventListener("click", function(){
 
 })
 
+searchBtn.addEventListener("click", function(){
+    if (document.getElementById("search-form").style.display=="block") {
+        document.getElementById("search-form").style.display="none";
+        document.getElementById("search-btn").style.color="var(--light-gray)";
+    }
+    else {
+        document.getElementById("search-form").style.display="block";
+        document.getElementById("search-btn").style.color="var(--light-gray-hover)";
+    }
+})
+
 function shoppingCartRender() {
     var shoppingCartData = localStorage.getItem("shoppingCart")
     document.getElementById("shopping-cart-products").innerHTML = "";
@@ -45,7 +57,9 @@ function shoppingCartRender() {
                             <div class="col-9">
                                 <div class="row">
                                     <p class="col-12 product-name">${json.products[j].name}</p>
-                                    <p class="col-5 product-name">${shoppingCartData[i].product_quantity} шт</p>
+                                    <p class="col-1 add-product justify-content-center">+</p>
+                                    <p class="col-3 product-name text-center">${shoppingCartData[i].product_quantity} шт</p>
+                                    <p class="col-1 minus-product justify-content-center">-</p>
                                     <p class="col-5 product-price">${json.products[j].price * shoppingCartData[i].product_quantity} грн.</p>
                                 </div>
                             </div>
