@@ -1,6 +1,4 @@
-var urlLocation = ((location.href.substring(location.href.lastIndexOf('/') + 1).split("?"))[0])
-
-if (urlLocation == "product.html") {
+if (location.pathname== "/product.html") {
     var buyBtn = document.querySelector("#buy-btn")
 
     var productId = (location.href.substring(location.href.lastIndexOf('?') + 1));
