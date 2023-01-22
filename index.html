@@ -9,9 +9,9 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
         <link rel="stylesheet" href="style.css">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     </head>
 
     <body>
@@ -21,13 +21,20 @@
                     <span id="menubtn" class="material-symbols-outlined">menu</span>
                 </div>
                 <div class="col-2 col-lg-1 text-center align-self-center">
-                    <span id="search-btn" class="text-white material-symbols-outlined">search</span>
+                    <div class="row justify-content-center">
+                        <span id="search-btn" class="text-white material-symbols-outlined col-2">search</span>
+                        <form id="search-form" class="col-10" style="display: none;">
+                            <input name="search" id="search-field" type="search">
+                        </form>
+                    </div>
                 </div>
 
                 <div class="col-4 col-lg-8 text-center align-self-center">
-                    <a href="index.html">
-                        <h1 class="text-white">black board</h1>
-                    </a>
+                    <div>
+                        <a id="brand-name" href="index.html">
+                            <h1>black board</h1>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="col-2 col-lg-1 text-center align-self-center">
@@ -79,8 +86,10 @@
                     <div id="shopping-cart-products">
 
                     </div>
+
+                    <p id="shopping-cart-total-price"></p>
                 
-                    <a class="link">перейти до оплати</a>
+                    <a id="purchase-btn"">перейти до оплати</a>
                 </div>
             </div>
         </div>
@@ -130,5 +139,6 @@
         </footer>
         <script src="archive/jquery-3.6.3.js"></script>
         <script src="js/navmenu.js"></script>
+
     </body>
 </html>
