@@ -42,6 +42,7 @@ function shoppingCartRender() {
     console.log(shoppingCartData)
     if ((shoppingCartData != null)) {
         shoppingCartData = JSON.parse(shoppingCartData)
+        totalPrice = 0
         for (let i = 0; i < shoppingCartData.length; i++) {
             fetch("products.json")
             .then(response => response.json())
@@ -54,17 +55,23 @@ function shoppingCartRender() {
                             <div class="col-3" >
                                 <img style="width: 100%; padding: 5px 0px 5px 0px;" src="images/promos/promo5.png">
                             </div>
-                            <div class="col-9">
+                            <div class="col-9" style="display: flex">
                                 <div class="row">
                                     <p class="col-12 product-name">${json.products[j].name}</p>
-                                    <p class="col-1 add-product justify-content-center">+</p>
-                                    <p class="col-3 product-name text-center">${shoppingCartData[i].product_quantity} шт</p>
-                                    <p class="col-1 minus-product justify-content-center">-</p>
-                                    <p class="col-5 product-price">${json.products[j].price * shoppingCartData[i].product_quantity} грн.</p>
+                                    <div class="col-6 justify-content-center">
+                                        <p class="add-product justify-content-center" style="display: inline-block">+</p>
+                                        <p class="product-name text-center" style="display: inline-block">${shoppingCartData[i].product_quantity} шт</p>
+                                        <p class="minus-product justify-content-center" style="display: inline-block">-</p>
+                                    </div>
+                                    <div class="col-5 justify-content-center">
+                                        <p class="product-price">${json.products[j].price * shoppingCartData[i].product_quantity} грн.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         `)
+                        totalPrice += json.products[j].price * shoppingCartData[i].product_quantity
+                        document.getElementById("shopping-cart-total-price").innerHTML = "загальна вартість: " + totalPrice + " грн."
                     }
                 }
             })
