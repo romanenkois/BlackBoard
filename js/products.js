@@ -1,9 +1,9 @@
 
 function addProduct(productId, productName, productPrice) {
-    fetch(`images/products/${productId}/${productId}main.png`, { method: 'HEAD' })
+    fetch(`images/products/${productId}/${productId}.png`, { method: 'HEAD' })
     .then(res => {
         if (res.ok) {
-            productImage = `images/products/${productId}/${productId}main.png`
+            productImage = `images/products/${productId}/${productId}.png`
         } else {
             productImage = `images/products/defaultImg.png`
         }
