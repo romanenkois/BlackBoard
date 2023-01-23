@@ -19,7 +19,6 @@ if (location.pathname== "/product.html") {
                     newCart.push(existingCart[i])
                 }
             }
-            
         }
         if (alredyAdded != true) {
             newCart.push(({product_id: productId, product_quantity: 1}))
