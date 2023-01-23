@@ -74,13 +74,14 @@
         <div id="shoping-cart" class="container-fluid" style="display: none;">
             <div class="row">
                 <div id="shopping-cart-content" class="col-12 col-md-6 col-lg-3">
-                    <h3 style="user-select: none;">Корзина</h3>
+                    <h3 style="user-select: none; color: var(--light-gray)">корзина</h3>
 
                     <div id="shopping-cart-products">
 
                     </div>
-                
-                    <a class="link">перейти до оплати</a>
+
+                    <p id="shopping-cart-total-price"></p>
+                    <a href="#"><p id="purchase-btn">перейти до оплати</p></a>
                 </div>
             </div>
         </div>
@@ -101,6 +102,10 @@
                 <div id="product-info-div"class="col-12 col-md-3">
                     <p id="product-info">Опис відсутній</p>
                     <p id="product-price" class="product-price">3999 грн</p>
+                    <div>
+                        <p id="add-one">+</p>
+                        <p id="minus-one">-</p>
+                    </div>
                     <div id="buy-btn">додати в кошик</div>
                 </div>
             </div>
