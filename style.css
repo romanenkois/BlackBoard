@@ -180,7 +180,7 @@ h1 {
 .product-name {
     color: var(--darker);
     font-weight: 700;
-    margin: 5px;
+    margin: 5px 10px;
 }
 
 .product-price {
@@ -240,13 +240,13 @@ h1 {
 
 #shopping-cart-content {
     background-color: var(--dark);
-    padding: 20px;
+    padding: 10px;
     position: fixed;
     right: 0;
     z-index: 10;
     margin: 0;
     border-top: 2px solid var(--darker);
-    border-bottom: 4px solid var(--darker);
+    border-bottom: 2px solid var(--darker);
 }
 
 .shopping-cart-product {
@@ -262,8 +262,10 @@ h1 {
 .add-product {
     text-align: center;
     font-weight: 900;
+    min-width: 30px;
+    min-height: 30px;
     color: var(--darker);
-    background-color: var(--green);
+    background-color: var(--primary);
     border-radius: 2px;
     user-select: none;
     cursor: pointer;
@@ -272,23 +274,28 @@ h1 {
 .minus-product {
     text-align: center;
     font-weight: 900;
+    min-width: 30px;
+    min-height: 30px;
     color: var(--darker);
-    background-color: var(--red);
+    background-color: var(--primary);
     border-radius: 2px;
     user-select: none;
     cursor: pointer;
 }
 
+#shopping-cart-total-price {
+    color: #FFFFFF;
+    font-size: larger;
+}
+
 #purchase-btn {
-    margin: 10px auto;
     padding: 10px 20px 10px 20px;
-    width: 100%;
+    margin: 0;
     text-align: center;
     font-weight: 550;
     background-color: var(--primary);
     color: var(--dark);
     user-select: none;
-    text-align: center;
     cursor: pointer;
 }
 
