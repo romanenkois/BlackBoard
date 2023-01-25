@@ -59,9 +59,9 @@ function shoppingCartRender() {
                                 <div class="row">
                                     <p class="col-12 product-name">${json.products[j].name}</p>
                                     <div class="col-6 justify-content-center">
-                                        <p class="add-product justify-content-center" style="display: inline-block">+</p>
-                                        <p class="product-name text-center" style="display: inline-block">${shoppingCartData[i].product_quantity} шт</p>
                                         <p class="minus-product justify-content-center" style="display: inline-block">-</p>
+                                        <p class="product-name text-center" style="display: inline-block">${shoppingCartData[i].product_quantity} шт</p>
+                                        <p class="add-product justify-content-center" style="display: inline-block">+</p>
                                     </div>
                                     <div class="col-5 justify-content-center">
                                         <p class="product-price">${json.products[j].price * shoppingCartData[i].product_quantity} грн.</p>
