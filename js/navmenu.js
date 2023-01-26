@@ -105,7 +105,7 @@ function shoppingCartRender() {
                             <div class="col-9" style="display: flex">
                                 <div class="row">
                                     <p class="col-12 product-name">${json.products[j].name}</p>
-                                    <div class="col-6 justify-content-center">
+                                    <div class="col-7 justify-content-center">
                                         <p class="minus-product justify-content-center" style="display: inline-block" onclick="minusProduct('${json.products[j].product_id}')">-</p>
                                         <p class="product-name text-center" style="display: inline-block">${shoppingCartData[i].product_quantity} шт</p>
                                         <p class="add-product justify-content-center" style="display: inline-block" onclick="plusProduct('${json.products[j].product_id}')">+</p>
