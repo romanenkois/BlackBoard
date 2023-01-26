@@ -218,18 +218,46 @@ h1 {
 
 #add-one {
     display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+    user-select: none;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 2px;
 }
 
-#product-number-to-add-form {
-    display: inline-block;
+#add-one p {
+    margin: auto;
+    padding: auto;
+    text-align: center;
 }
 
 #product-number-to-add {
     display: inline-block;
+    min-width: 30px;
+    min-height: 30px;
 }
 
 #minus-one {
     display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+    user-select: none;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+
+#minus-one p {
+    margin: auto;
+    padding: auto;
+    text-align: center;
+}
+
+#product-number-to-add-form {
+    margin: 10px 15px;
 }
 
 #buy-btn {
