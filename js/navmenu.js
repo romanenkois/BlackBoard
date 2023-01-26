@@ -110,7 +110,7 @@ function shoppingCartRender() {
                                         <p class="product-name text-center" style="display: inline-block">${shoppingCartData[i].product_quantity} шт</p>
                                         <p class="add-product justify-content-center" style="display: inline-block" onclick="plusProduct('${json.products[j].product_id}')">+</p>
                                     </div>
-                                    <div class="col-5 justify-content-center">
+                                    <div class="col-4 justify-content-center">
                                         <p class="product-price">${json.products[j].price * shoppingCartData[i].product_quantity} грн.</p>
                                     </div>
                                 </div>
