@@ -1,4 +1,4 @@
-if (location.pathname== "/product.html") {
+if (location.pathname == "/product.html") {
     var productId = (location.href.substring(location.href.lastIndexOf('?') + 1));
 
     const addBtn = document.querySelector("#add-one");
@@ -46,4 +46,8 @@ if (location.pathname== "/product.html") {
             shoppingCartRender();
         }
     })
+}
+
+if (location.pathname == "/shoppingCart.html") {
+    console.log("мур")
 }
