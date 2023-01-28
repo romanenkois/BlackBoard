@@ -9,6 +9,7 @@
     --primary-hover: #ecbd00;
     --green: #45d174;
     --red: #e25353;
+    --light: #f0f0f0;
 }
 
 ::selection {
@@ -24,6 +25,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    background-color: var(--light);
 }
 
 a {
@@ -272,7 +274,7 @@ h1 {
     user-select: none;
 }
 
-/* cart.html styles */
+/* cart in nav styles */
 
 #shoping-cart {
     color: var(--light-gray);
@@ -295,7 +297,7 @@ h1 {
 }
 
 .shopping-cart-product {
-    background-color: #FFFFFF;
+    background-color: var(--light);
     color: var(--dark);
     margin-top: 5px;
     margin-bottom: 5px;
@@ -348,6 +350,48 @@ h1 {
     background-color: var(--primary-hover);
 }
 
+/* shoppingCart.html styles */
+
+.step {
+    border-top: var(--darker) 2px solid;
+    padding: 10px 0px;
+}
+
+.step-name {
+    font-size: xxx-large;
+    font-weight: 900;
+    color: var(--light-gray);
+    user-select: none;
+}
+
+.step-content form div {
+    margin: 5px 0px;
+
+}
+
+.step-info {
+    font-size: larger;
+    font-weight: 500;
+}
+
+.step-next-btn {
+    background-color: var(--dark);
+    padding: 10px 15px;
+    margin: 5px;
+    max-width: 130px;
+    max-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    cursor: pointer;
+}
+
+.step-next-btn p{
+    padding: auto;
+    margin: auto;
+    text-align: center;
+    color: var(--light-gray);
+}
 /* 404.html styles */
 
 .link {
