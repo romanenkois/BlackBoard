@@ -32,6 +32,12 @@
             "product_type": "zipka"
         },
         {
+            "product_id": "02003",
+            "name": "зіпка громадянська війна на трубах",
+            "price": 8999,
+            "product_type": "zipka"
+        },
+        {
             "product_id": "03001",
             "name": "Чорний худі",
             "price": 2999,
