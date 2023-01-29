@@ -16,8 +16,8 @@ stepName4 = document.querySelector("#step-name4");
 nextBtn1.addEventListener("click", function () {
     content1.style.display = "none";
     content2.style.display = "block";
+    stepName1.style.cursor = "pointer";
     stepName1.addEventListener("click", function () {
-        stepName1.style.cursor = "pointer";
         content4.style.display = "none";
         content3.style.display = "none";
         content2.style.display = "none";
@@ -28,8 +28,8 @@ nextBtn1.addEventListener("click", function () {
 nextBtn2.addEventListener("click", function () {
     content2.style.display = "none";
     content3.style.display = "block";
+    stepName2.style.cursor = "pointer";
     stepName2.addEventListener("click", function () {
-        stepName2.style.cursor = "pointer";
         content4.style.display = "none";
         content3.style.display = "none";
         content2.style.display = "block";
@@ -40,8 +40,8 @@ nextBtn2.addEventListener("click", function () {
 nextBtn3.addEventListener("click", function () {
     content3.style.display = "none";
     content4.style.display = "block";
+    stepName3.style.cursor = "pointer";
     stepName3.addEventListener("click", function () {
-        stepName3.style.cursor = "pointer";
         content4.style.display = "none";
         content3.style.display = "block";
         content2.style.display = "none";
@@ -52,8 +52,8 @@ nextBtn3.addEventListener("click", function () {
 nextBtn4.addEventListener("click", function () {
     content4.style.display = "none";
     content1.style.display = "block";
+    stepName4.style.cursor = "pointer";
     stepName4.addEventListener("click", function () {
-        stepName4.style.cursor = "pointer";
         content4.style.display = "block";
         content3.style.display = "none";
         content2.style.display = "none";
