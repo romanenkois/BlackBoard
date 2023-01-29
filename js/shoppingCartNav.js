@@ -7,6 +7,7 @@ function minusProduct(prdctId) {
             if (existingCart[i].product_id == prdctId) {
                 if (existingCart[i].product_quantity > 1) {
                     existingCart[i].product_quantity -= 1;
+                    document.querySelector(`#quantity-${prdctId}`).innerHTML = `${existingCart[i].product_quantity} шт`
                     newCart.push(existingCart[i]);
                 }              
             } else {
@@ -15,7 +16,6 @@ function minusProduct(prdctId) {
         }
     }
     localStorage.setItem("shoppingCart", JSON.stringify(newCart));
-    shoppingCartRender();
 }
 
 function plusProduct(prdctId) {    
@@ -28,6 +28,7 @@ function plusProduct(prdctId) {
 
             if (existingCart[i].product_id == prdctId) {
                 existingCart[i].product_quantity += 1;
+                document.querySelector(`#quantity-${prdctId}`).innerHTML = `${existingCart[i].product_quantity} шт`
                 alredyAdded = true;
                 newCart.push(existingCart[i]);
                 
@@ -38,9 +39,38 @@ function plusProduct(prdctId) {
     }
     if (alredyAdded != true) {
         newCart.push(({product_id: prdctId, product_quantity: 1}));
+
+        var shoppingCartData = localStorage.getItem("shoppingCart")
+        fetch("products.json")
+        .then(response => response.json())
+        .then(json => {
+            for (let j = 0; j < json.products.length; j++) {
+                if (shoppingCartData[i].product_id == json.products[j].product_id) {
+                    document.querySelector(`${prdctId}`).insertAdjacentHTML("beforeend",`
+                    <div id="${shoppingCartData[i].product_id}" class="shopping-cart-product row">
+                        <div class="col-3" >
+                            <img style="width: 100%; padding: 5px 0px 5px 0px;" src="images/promos/promo8.png">
+                        </div>
+                        <div class="col-9" style="display: flex">
+                            <div class="row">
+                                <p class="col-12 product-name">${json.products[j].name}</p>
+                                <div class="col-7 justify-content-center">
+                                    <p class="minus-product justify-content-center" style="display: inline-block" onclick="minusProduct('${json.products[j].product_id}')">-</p>
+                                    <p id="quantity-${shoppingCartData[i].product_id}" class="product-name text-center" style="display: inline-block">${shoppingCartData[i].product_quantity} шт</p>
+                                    <p class="add-product justify-content-center" style="display: inline-block" onclick="plusProduct('${json.products[j].product_id}')">+</p>
+                                </div>
+                                <div class="col-5 justify-content-center">
+                                    <p class="product-price">${json.products[j].price * shoppingCartData[i].product_quantity} грн.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    `)
+                }
+            }
+        })
     }
     localStorage.setItem("shoppingCart", JSON.stringify(newCart));
-    shoppingCartRender();
 }
 
 function shoppingCartRender() {
@@ -60,7 +90,7 @@ function shoppingCartRender() {
                         console.log(json.products[j].product_id)
                         console.log(typeof(json.products[j].product_id))
                         document.getElementById("shopping-cart-products").insertAdjacentHTML("beforeend",`
-                        <div class="shopping-cart-product row">
+                        <div id="${shoppingCartData[i].product_id}" class="shopping-cart-product row">
                             <div class="col-3" >
                                 <img style="width: 100%; padding: 5px 0px 5px 0px;" src="images/promos/promo8.png">
                             </div>
@@ -69,7 +99,7 @@ function shoppingCartRender() {
                                     <p class="col-12 product-name">${json.products[j].name}</p>
                                     <div class="col-7 justify-content-center">
                                         <p class="minus-product justify-content-center" style="display: inline-block" onclick="minusProduct('${json.products[j].product_id}')">-</p>
-                                        <p class="product-name text-center" style="display: inline-block">${shoppingCartData[i].product_quantity} шт</p>
+                                        <p id="quantity-${shoppingCartData[i].product_id}" class="product-name text-center" style="display: inline-block">${shoppingCartData[i].product_quantity} шт</p>
                                         <p class="add-product justify-content-center" style="display: inline-block" onclick="plusProduct('${json.products[j].product_id}')">+</p>
                                     </div>
                                     <div class="col-5 justify-content-center">
