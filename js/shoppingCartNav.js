@@ -9,7 +9,9 @@ function minusProduct(prdctId) {
                     existingCart[i].product_quantity -= 1;
                     document.querySelector(`#quantity-${prdctId}`).innerHTML = `${existingCart[i].product_quantity} шт`
                     newCart.push(existingCart[i]);
-                }              
+                } else {
+                    document.querySelector(`#render-${prdctId}`).remove()
+                }           
             } else {
                 newCart.push(existingCart[i])
             }
@@ -47,7 +49,7 @@ function plusProduct(prdctId) {
             for (let j = 0; j < json.products.length; j++) {
                 if (shoppingCartData[i].product_id == json.products[j].product_id) {
                     document.querySelector(`${prdctId}`).insertAdjacentHTML("beforeend",`
-                    <div id="${shoppingCartData[i].product_id}" class="shopping-cart-product row">
+                    <div id="render-${shoppingCartData[i].product_id}" class="shopping-cart-product row">
                         <div class="col-3" >
                             <img style="width: 100%; padding: 5px 0px 5px 0px;" src="images/promos/promo8.png">
                         </div>
@@ -90,7 +92,7 @@ function shoppingCartRender() {
                         console.log(json.products[j].product_id)
                         console.log(typeof(json.products[j].product_id))
                         document.getElementById("shopping-cart-products").insertAdjacentHTML("beforeend",`
-                        <div id="${shoppingCartData[i].product_id}" class="shopping-cart-product row">
+                        <div id="render-${shoppingCartData[i].product_id}" class="shopping-cart-product row">
                             <div class="col-3" >
                                 <img style="width: 100%; padding: 5px 0px 5px 0px;" src="images/promos/promo8.png">
                             </div>
