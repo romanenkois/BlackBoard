@@ -99,18 +99,7 @@
         
         <script src="archive/jquery-3.6.3.js"></script>
         <script src="js/navmenu.js"></script>
+        <script src="js/shoppingCartNav.js"></script>
         <script src="js/products.js"></script>
-        <script>
-            var filter = (location.href.substring(location.href.lastIndexOf('?') + 1));
-            var filt = (filter.split("="))
-            if (filt[1] != null) {
-                addProductType(filt[1])
-            } else {
-                addAllProducts()
-            }
-        </script>
-        <script>
-            document.getElementById("content").style.minHeight = window.outerHeight
-        </script>
     </body>
 </html>
