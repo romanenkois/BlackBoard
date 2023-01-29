@@ -362,6 +362,12 @@ h1 {
     font-weight: 900;
     color: var(--light-gray);
     user-select: none;
+    padding: 0px 5px;
+}
+
+
+.step-content {
+    padding: 0px 10px;
 }
 
 .step-content form div {
