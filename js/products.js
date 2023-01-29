@@ -38,3 +38,11 @@ function addAllProducts() {
         }
     );
 }
+
+var filter = (location.href.substring(location.href.lastIndexOf('?') + 1));
+var filt = (filter.split("="))
+if (filt[1] != null) {
+    addProductType(filt[1])
+} else {
+    addAllProducts()
+}
