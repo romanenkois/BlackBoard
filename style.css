@@ -392,6 +392,16 @@ h1 {
     text-align: center;
     color: var(--light-gray);
 }
+
+#shopping-cart-short {
+    background-color: var(--light-gray);
+    padding: 5px 10px;
+}
+
+#shopping-cart-short p {
+    margin: 5px 0px;
+}
+
 /* 404.html styles */
 
 .link {
