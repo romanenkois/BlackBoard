@@ -27,11 +27,17 @@
     color: var(--light-gray-hover);
 }
 
-
 #filter2 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding: 5px;
+}
+
+#filter2 div {
+    padding: 12px;
+    margin-right: 20px;
     user-select: none;
+    font-weight: 500;
+    color: var(--dark);
+    cursor: pointer;
 }
 
 #products {
