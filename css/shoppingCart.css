@@ -38,6 +38,10 @@
     cursor: pointer;
 }
 
+.step-next-btn:hover {
+    background-color: var(--darker);
+}
+
 .step-next-btn p{
     padding: auto;
     margin: auto;
@@ -52,4 +56,44 @@
 
 #shopping-cart-short p {
     margin: 5px 0px;
+}
+
+
+/* right window */
+
+.price {
+    font-size: 1.2rem;
+    color: var(--dark);
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.price-discount {
+    text-decoration: underline;
+}
+
+.price-final {
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-top: 2px solid var(--dark);
+    padding: 15px 0;
+}
+
+#make-purchace {
+    background-color: var(--dark);
+    user-select: none;
+    cursor: pointer;
+}
+
+#make-purchace:hover {
+    transition: 0.2s;
+    background-color: var(--darker);
+}
+
+#make-purchace p{
+    color: var(--primary);
+    text-align: center;
+    padding: 15px;
+    font-size: 1.25rem;
+    font-weight: 700;
 }
