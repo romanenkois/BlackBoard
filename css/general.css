@@ -7,6 +7,7 @@
     --light-gray-dark: #a0a0a0;
     --primary: #ffd900;
     --primary-hover: #ecbd00;
+    --primary-dark: #a88700;
     --green: #45d174;
     --red: #e25353;
     --light: #f0f0f0;
@@ -67,6 +68,7 @@ h1 {
 }
 
 #header div span:hover {
+    transition: 0.4s;
     color: var(--light-gray-darker)!important;
 }
 
@@ -114,10 +116,12 @@ h1 {
 }
 
 .navmenu-btn-main a:hover {
+    transition: 0.2s;
     color: var(--primary-hover);
 }
 
 .navmenu-btn:hover .navmenu-btn:active {
+    transition: 0.2s;
     color: #FFFFFF;
 }
 
@@ -148,9 +152,16 @@ h1 {
     color: var(--dark);
     margin-top: 5px;
     margin-bottom: 5px;
-    border-radius: 2px;
+    border-radius: 1px;
     margin: 5px 0px 10px 0px;
     padding: 5px;
+}
+
+.product-name {
+    color: var(--darker);
+    font-weight: 600;
+    padding: 5px 10px;
+    margin: 0;
 }
 
 .add-product {
@@ -163,6 +174,7 @@ h1 {
     border-radius: 2px;
     user-select: none;
     cursor: pointer;
+    margin: 0;
 }
 
 .minus-product {
@@ -175,6 +187,20 @@ h1 {
     border-radius: 2px;
     user-select: none;
     cursor: pointer;
+    margin: 0;
+}
+
+.add-product:hover {
+    background-color: var(--primary-hover);
+}
+
+.minus-product:hover {
+    background-color: var(--primary-hover)
+}
+
+.product-price {
+    margin: 0;
+    padding: 5px 0px;
 }
 
 #shopping-cart-total-price {
@@ -194,6 +220,7 @@ h1 {
 }
 
 #purchase-btn:hover {
+    transition: 0.1s;
     background-color: var(--primary-hover);
 }
 
@@ -201,6 +228,7 @@ h1 {
 
 .promo {
     width: 100%;
+    max-height: 1080px;
 }
 
 /* footer */
