@@ -1,0 +1,13 @@
+.link {
+    margin: 5px 0px 5px 0px;
+    padding: 5px 10px;
+    font-weight: 550;
+    background-color: var(--dark);
+    color: var(--primary);
+    user-select: none;
+    text-align: center
+}
+
+.link:hover {
+    color: var(--primary-hover);
+}
