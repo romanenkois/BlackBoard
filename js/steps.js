@@ -51,7 +51,6 @@ nextBtn3.addEventListener("click", function () {
 
 nextBtn4.addEventListener("click", function () {
     content4.style.display = "none";
-    content1.style.display = "block";
     stepName4.style.cursor = "pointer";
     stepName4.addEventListener("click", function () {
         content4.style.display = "block";
