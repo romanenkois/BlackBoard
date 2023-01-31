@@ -1,0 +1,55 @@
+.step {
+    border-top: var(--darker) 2px solid;
+    padding: 10px 0px;
+}
+
+.step-name {
+    font-size: xxx-large;
+    font-weight: 900;
+    color: var(--light-gray);
+    user-select: none;
+    padding: 0px 5px;
+}
+
+
+.step-content {
+    padding: 0px 10px;
+}
+
+.step-content form div {
+    margin: 5px 0px;
+
+}
+
+.step-info {
+    font-size: larger;
+    font-weight: 500;
+}
+
+.step-next-btn {
+    background-color: var(--dark);
+    padding: 10px 15px;
+    margin: 5px;
+    max-width: 130px;
+    max-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    cursor: pointer;
+}
+
+.step-next-btn p{
+    padding: auto;
+    margin: auto;
+    text-align: center;
+    color: var(--light-gray);
+}
+
+#shopping-cart-short {
+    background-color: var(--light-gray);
+    padding: 5px 10px;
+}
+
+#shopping-cart-short p {
+    margin: 5px 0px;
+}
