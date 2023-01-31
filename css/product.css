@@ -79,3 +79,8 @@
     text-align: center;
     user-select: none;
 }
+
+#buy-btn:hover {
+    transition: 0.1s;
+    background-color: var(--primary-hover);
+}
