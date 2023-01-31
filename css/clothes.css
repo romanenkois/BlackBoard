@@ -1,0 +1,54 @@
+#filter {
+    background-color: var(--dark);
+    color: var(--light-gray);
+    user-select: none;
+    border-top: 2px solid var(--darker);
+    border-bottom: 2px solid var(--darker);
+}
+
+#filter h3 {
+    margin-top: 5px;
+    color: var(--primary)!important;
+}
+
+#filter h3:hover {
+    color: var(--primary-hover)!important;
+}
+
+#filter a {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    color: var(--light-gray);
+}
+
+#filter p:hover {
+    color: var(--light-gray-hover);
+}
+
+
+#filter2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    user-select: none;
+}
+
+#products {
+    padding: 5px;
+}
+
+.product {
+    padding: 5px;
+}
+.product-name {
+    color: var(--darker);
+    font-weight: 700;
+    margin: 5px 10px;
+}
+
+.product-price {
+    color: var(--dark);
+    font-weight: 400;
+    margin: 5px;
+}
