@@ -1,4 +1,26 @@
-#main-title1 div div {
-    margin-left: 5px;
-    margin-right: 5px;
+p {
+    color: var(--dark);
+}
+
+.promo-btn {
+    background-color: var(--dark);
+    padding: 20px;
+    margin: 10px;
+    display: block;
+    max-width: 550px;
+    text-align: center;
+}
+.promo-btn:hover {
+    transition: 0.4s;
+    background-color: var(--darker);
+}
+
+.promo-btn p {
+    position: relative;
+    color: var(--light);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.1rem;
 }
