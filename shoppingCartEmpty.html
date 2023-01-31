@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>black board</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="icon" type="image/x-icon" href="favicon.png">
+
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+            <link rel="stylesheet" href="css/general.css">
+            <link rel="stylesheet" href="css/specialPages.css">
+
+        </head>
+        
+    <body>
+        <div id="nav" class="container-fluid text-white">
+            <div id="header" class="row">
+                <div class="col-2 col-lg-1 text-center align-self-center">
+                    <span id="menubtn" class="material-symbols-outlined">menu</span>
+                </div>
+                <div class="col-2 col-lg-1 text-center align-self-center">
+                    <span id="search-btn" class="text-white material-symbols-outlined">search</span>
+                </div>
+
+                <div class="col-4 col-lg-8 text-center align-self-center">
+                    <a href="index.html">
+                        <h1 class="text-white">black board</h1>
+                    </a>
+                </div>
+
+                <div class="col-2 col-lg-1 text-center align-self-center">
+                    <span id="shopping-cart-btn" class="text-white material-symbols-outlined ">shopping_cart</span>
+                </div>
+                <div class="col-2 col-lg-1 text-center align-self-center">
+                    <a href="#">
+                        <span id="account-btn" class="text-white material-symbols-outlined">person</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div id="navmenu" style="display: none">
+                <div class="row text-center">
+                    <div id="nav-zipka" class="col-12 col-md navmenu-btn navmenu-btn-main">
+                        <a href="clothes.html" >
+                            Одяг
+                        </a>
+                    </div>
+                    <div id="nav-zipka" class="col-12 col-md navmenu-btn">
+                        <a href="clothes.html?category=zipka">
+                            зіпки
+                        </a>
+                    </div>
+                    <div id="nav-tshirt" class="col-12 col-md navmenu-btn">
+                        <a href="clothes.html?category=tshirt">
+                            футболки
+                        </a>
+                    </div>
+                    <div id="nav-pants" class="col-12 col-md navmenu-btn">
+                        <a href="clothes.html?category=pants">
+                            штани
+                        </a>
+                    </div>
+                    <div id="nav-scarf" class="col-12 col-md navmenu-btn">
+                        <a href="clothes.html?category=scarf">
+                            шарфи
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="shoping-cart" class="container-fluid" style="display: none;">
+            <div class="row">
+                <div id="shopping-cart-content" class="col-12 col-md-6 col-lg-3">
+                    <h3 style="user-select: none; color: var(--light-gray)">корзина</h3>
+
+                    <div id="shopping-cart-products">
+
+                    </div>
+
+                    <p id="shopping-cart-total-price"></p>
+                    <a href="shoppingCart.html"><p id="purchase-btn">перейти до оплати</p></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center" style="margin-top: auto; margin-bottom: auto;">
+            <div class="justify-content-center">
+                <h1>Схоже що твоя корзина пуста</h1>
+                <p>спробуй наповнити її спочатку чимось</p>
+                <a href="/clothes.html" class="link">подивитися одяг</a>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container-fluid bg-dark" style="position: absolute; bottom: 0;">
+                <div class="row">
+                    <div class="col-12 text-center align-self-center">
+                        <p class="footer-text">© black board, 2022 all rigths reserved</p>
+                        <p class="footer-text">blackboard.inc Vorozhnechi street, Kyiv, Ukraine</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/navmenu.js"></script>
+        <script src="js/shoppingCartNav.js"></script>
+    </body>
+</html>
