@@ -19,11 +19,12 @@ minusBtn.addEventListener("click", function() {
 const buyBtn = document.querySelector("#buy-btn");
 
 buyBtn.addEventListener("click", function() {
-    existingCart = JSON.parse(localStorage.getItem("shoppingCart"));
+    let existingCart = JSON.parse(localStorage.getItem("shoppingCart"));
     let newCart = []
     let alredyAdded = false
 
-    if (existingCart != null) {
+    if ((existingCart != null) && (JSON.stringify(existingCart) != "[]")) {
+        
         for (let i = 0; i < existingCart.length; i++) {
 
             if (existingCart[i].product_id == productId) {
@@ -38,9 +39,11 @@ buyBtn.addEventListener("click", function() {
                 newCart.push(existingCart[i])
             }
         }
+    } else {
+        newCart.push(({product_id: productId, product_quantity: parseInt(numberToAdd.innerHTML)}));
+        alredyAdded = false;
     }
     if (alredyAdded != true) {
-        newCart.push(({product_id: productId, product_quantity: parseInt(numberToAdd.innerHTML)}));
         var shoppingCartData = localStorage.getItem("shoppingCart")
         if (document.querySelector("#shoping-cart").style.display == "block") {
             fetch("products.json")
@@ -48,7 +51,7 @@ buyBtn.addEventListener("click", function() {
             .then(json => {
                 for (let j = 0; j < json.products.length; j++) {
                     if (productId == json.products[j].product_id) {
-                        document.querySelector(`${productId}`).insertAdjacentHTML("beforeend",`
+                        document.querySelector(`#shopping-cart-products`).insertAdjacentHTML("beforeend",`
                         <div id="render-${shoppingCartData[i].product_id}" class="shopping-cart-product row">
                             <div class="col-3" >
                                 <img style="width: 100%; padding: 5px 0px 5px 0px;" src="images/promos/promo8.png">
