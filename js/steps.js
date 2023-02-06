@@ -24,29 +24,47 @@ nextBtn1.addEventListener("click", function () {
         content1.style.display = "block";
     });
 });
-
+function checkIfSecondStepIsDone() {
+    
+        
+}
 nextBtn2.addEventListener("click", function () {
-    content2.style.display = "none";
-    content3.style.display = "block";
-    stepName2.style.cursor = "pointer";
-    stepName2.addEventListener("click", function () {
-        content4.style.display = "none";
-        content3.style.display = "none";
-        content2.style.display = "block";
-        content1.style.display = "none";
-    });
+    var name = document.querySelector("#name").value;
+    var surname = document.querySelector("#surname").value;
+    var phone = document.querySelector("#phone").value;
+    var email = document.querySelector("#email").value;
+    var address = document.querySelector("#address").value;
+    var city = document.querySelector("#city").value;
+    var country = document.querySelector("#country").value;
+    var zip = document.querySelector("#zip").value;
+    if (name != "" && surname != "" && phone != "" && email != "" && address != "" && city != "" && country != "" && zip != "") {
+        content2.style.display = "none";
+        content3.style.display = "block";
+        stepName2.style.cursor = "pointer";
+        stepName2.addEventListener("click", function () {
+            content4.style.display = "none";
+            content3.style.display = "none";
+            content2.style.display = "block";
+            content1.style.display = "none";
+        });
+    }
 });
 
 nextBtn3.addEventListener("click", function () {
-    content3.style.display = "none";
-    content4.style.display = "block";
-    stepName3.style.cursor = "pointer";
-    stepName3.addEventListener("click", function () {
-        content4.style.display = "none";
-        content3.style.display = "block";
-        content2.style.display = "none";
-        content1.style.display = "none";
-    });
+    var cardNumber = document.querySelector("#cardNumber").value;
+    var cardDate = document.querySelector("#cardDate").value;
+    var cardCvv = document.querySelector("#cardCvv").value;
+    if (cardNumber != "" && cardDate != "" && cardCvv != "") {
+        content3.style.display = "none";
+        content4.style.display = "block";
+        stepName3.style.cursor = "pointer";
+        stepName3.addEventListener("click", function () {
+            content4.style.display = "none";
+            content3.style.display = "block";
+            content2.style.display = "none";
+            content1.style.display = "none";
+        });
+    }
 });
 
 nextBtn4.addEventListener("click", function () {
