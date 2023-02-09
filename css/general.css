@@ -244,3 +244,14 @@ h1 {
     font-family: "gogh", sans-serif;
 }
 
+.footer-link {
+    text-align: center;
+    color: var(--light-gray-dark);
+    font-family: "gogh", sans-serif;
+    cursor: pointer;
+    user-select: none;
+}
+
+.footer-link:hover {
+    color: var(--light-gray-hover);
+}
