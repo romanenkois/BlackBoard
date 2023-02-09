@@ -30,7 +30,8 @@
         </div>
 
         <div class="container">
-            <a class="link" href="https://www.t.me/yakanava">помуркать</a>
+            <p>тг <a href="https://www.t.me/yakanava">помуркать</a></p>
+            <div>емейл <div class="email">тянка@мур.ком</div></div>
         </div>
 
 
@@ -47,5 +48,12 @@
                 </div>
             </div>
         </footer>
+
+        <script>
+            document.querySelector(".email").addEventListener("click", function() {
+                navigator.clipboard.writeText(document.querySelector(".email").innerHTML)
+                alert("скопійовано")
+            })
+        </script>
     </body>
 </html>
