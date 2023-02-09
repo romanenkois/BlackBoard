@@ -13,6 +13,33 @@ stepName2 = document.querySelector("#step-name2");
 stepName3 = document.querySelector("#step-name3");
 stepName4 = document.querySelector("#step-name4");
 
+function checkIfSecondStepIsCompleted() {
+    let name = document.querySelector("#name").value;
+    let surname = document.querySelector("#surname").value;
+    let phone = document.querySelector("#phone").value;
+    let email = document.querySelector("#email").value;
+    let address = document.querySelector("#address").value;
+    let city = document.querySelector("#city").value;
+    let country = document.querySelector("#country").value;
+    let zip = document.querySelector("#zip").value;
+    if (name != "" && surname != "" && phone != "" && email != "" && address != "" && city != "" && country != "" && zip != "") {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function checkIfThirdStepIsCompleted() {
+    let cardNumber = document.querySelector("#cardNumber").value;
+    let cardDate = document.querySelector("#cardDate").value;
+    let cardCvv = document.querySelector("#cardCvv").value;
+    if (cardNumber != "" && cardDate != "" && cardCvv != "") {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 nextBtn1.addEventListener("click", function () {
     content1.style.display = "none";
     content2.style.display = "block";
@@ -24,20 +51,9 @@ nextBtn1.addEventListener("click", function () {
         content1.style.display = "block";
     });
 });
-function checkIfSecondStepIsDone() {
-    
-        
-}
+
 nextBtn2.addEventListener("click", function () {
-    var name = document.querySelector("#name").value;
-    var surname = document.querySelector("#surname").value;
-    var phone = document.querySelector("#phone").value;
-    var email = document.querySelector("#email").value;
-    var address = document.querySelector("#address").value;
-    var city = document.querySelector("#city").value;
-    var country = document.querySelector("#country").value;
-    var zip = document.querySelector("#zip").value;
-    if (name != "" && surname != "" && phone != "" && email != "" && address != "" && city != "" && country != "" && zip != "") {
+    if (checkIfSecondStepIsCompleted()) {
         content2.style.display = "none";
         content3.style.display = "block";
         stepName2.style.cursor = "pointer";
@@ -51,10 +67,7 @@ nextBtn2.addEventListener("click", function () {
 });
 
 nextBtn3.addEventListener("click", function () {
-    var cardNumber = document.querySelector("#cardNumber").value;
-    var cardDate = document.querySelector("#cardDate").value;
-    var cardCvv = document.querySelector("#cardCvv").value;
-    if (cardNumber != "" && cardDate != "" && cardCvv != "") {
+    if (checkIfThirdStepIsCompleted()) {
         content3.style.display = "none";
         content4.style.display = "block";
         stepName3.style.cursor = "pointer";
@@ -63,6 +76,12 @@ nextBtn3.addEventListener("click", function () {
             content3.style.display = "block";
             content2.style.display = "none";
             content1.style.display = "none";
+        });
+    }
+    if (checkIfSecondStepIsCompleted() && checkIfThirdStepIsCompleted()) {
+        document.querySelector("#make-purchace").style.cursor = "pointer";
+        document.querySelector("#make-purchace").addEventListener("click", function () {
+            // make purchace
         });
     }
 });
