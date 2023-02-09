@@ -146,7 +146,10 @@ function shoppingCartRender() {
                             </div>
                             <div class="col-9" style="display: flex">
                                 <div class="row">
-                                    <p class="col-12 product-name">${json.products[j].name}</p>
+                                    <div class="col-lg-12"></div>
+                                    <div class="col-12">
+                                        <p class="product-name">${json.products[j].name}</p>
+                                    </div>
                                     <div class="col-7 justify-content-center">
                                         <p class="minus-product justify-content-center" style="display: inline-block" onclick="minusProduct('${json.products[j].product_id}')">-</p>
                                         <p id="quantity-${shoppingCartData[i].product_id}" class="product-name text-center" style="display: inline-block">${shoppingCartData[i].product_quantity} шт</p>
@@ -171,6 +174,26 @@ function shoppingCartRender() {
         document.getElementById("shopping-cart-products").insertAdjacentHTML("beforeend","<p class='shopping-cart-product' style='text-align: center' >Поки тут пусто</p>")
         document.getElementById("shopping-cart-total-price").style.display = "none";
         document.getElementById("purchase-btn").style.display = "none";
+    }
+}
+
+function renderFinalPrices() {
+    var shoppingCartData = localStorage.getItem("shoppingCart")
+    if ((shoppingCartData != null) && (shoppingCartData!= "[]")) {
+        shoppingCartData = JSON.parse(shoppingCartData)
+        totalPrice = 0
+        for (let i = 0; i < shoppingCartData.length; i++) {
+            fetch("products.json")
+            .then(response => response.json())
+            .then(json => {
+                for (let j = 0; j < json.products.length; j++) {
+                    if (shoppingCartData[i].product_id == json.products[j].product_id) {
+                        totalPrice += json.products[j].price * shoppingCartData[i].product_quantity
+                        document.getElementById("shopping-cart-total-price").innerHTML = "загальна вартість: " + totalPrice + " грн."
+                    }
+                }
+            })
+        }
     }
 }
 
