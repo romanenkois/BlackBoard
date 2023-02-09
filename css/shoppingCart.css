@@ -203,7 +203,7 @@
 #make-purchace {
     background-color: var(--dark);
     user-select: none;
-    cursor: pointer;
+    cursor: not-allowed;
 }
 
 #make-purchace:hover {
