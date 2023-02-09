@@ -23,19 +23,11 @@ function renderPrices() {
                         document.getElementById(`price-${json.products[j].price}`).innerHTML = `${json.products[j].price * shoppingCartData[i].product_quantity} грн`
 
                         totalPrice += json.products[j].price * shoppingCartData[i].product_quantity
-                        document.getElementById("shopping-cart-total-price").innerHTML = "загальна вартість: " + totalPrice + " грн."
-                        document.getElementById("shopping-cart-total-price").style.display = "block"
-                        document.getElementById("purchase-btn").style.display = "block";
                     }
                 }
             })
         }
-    } else {
-        console.log(222)
-        document.getElementById("shopping-cart-total-price").style.display = "none"
-        document.getElementById("purchase-btn").style.display = "none";
     }
-    console.log(333)
 }
 
 function minusProduct(prdctId) {
@@ -65,6 +57,7 @@ function minusProduct(prdctId) {
     localStorage.setItem("shoppingCart", JSON.stringify(newCart));
 
     renderPrices()
+    renderFinalPrices()
 }
 
 function plusProduct(prdctId) {    
@@ -121,6 +114,7 @@ function plusProduct(prdctId) {
     }
     localStorage.setItem("shoppingCart", JSON.stringify(newCart));
     renderPrices()
+    renderFinalPrices()
 }
 
 function shoppingCartRender() {
@@ -182,16 +176,24 @@ function renderFinalPrices() {
     if ((shoppingCartData != null) && (shoppingCartData!= "[]")) {
         shoppingCartData = JSON.parse(shoppingCartData)
         totalPrice = 0
+        productsPrice = 0
         for (let i = 0; i < shoppingCartData.length; i++) {
             fetch("products.json")
             .then(response => response.json())
             .then(json => {
                 for (let j = 0; j < json.products.length; j++) {
                     if (shoppingCartData[i].product_id == json.products[j].product_id) {
-                        totalPrice += json.products[j].price * shoppingCartData[i].product_quantity
-                        document.getElementById("shopping-cart-total-price").innerHTML = "загальна вартість: " + totalPrice + " грн."
+                        productsPrice += json.products[j].price * shoppingCartData[i].product_quantity
+                        
                     }
                 }
+                shipmentPrice = 50
+                discount = 0
+                totalPrice = productsPrice + shipmentPrice
+                document.querySelector("#price-products").innerHTML = "вартість товарів: " + productsPrice + " грн."
+                document.querySelector("#price-shipment").innerHTML = "вартість доставки: " + shipmentPrice + " грн."
+                document.querySelector("#discount").innerHTML = "знижки/купони: " + discount + " грн."
+                document.querySelector("#price-final").innerHTML = "загальна вартість: " + totalPrice + " грн."
             })
         }
     }
@@ -199,3 +201,4 @@ function renderFinalPrices() {
 
 checkIfCartEmpty()
 shoppingCartRender()
+renderFinalPrices()
