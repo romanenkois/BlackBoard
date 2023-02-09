@@ -23,7 +23,8 @@
             "product_id": "02001",
             "name": "зіпка з старзами",
             "price": 3499,
-            "product_type": "zipka"
+            "product_type": "zipka",
+            "product_info": "альт мнмт"
         },
         {
             "product_id": "02002",
@@ -107,7 +108,8 @@
             "product_id": "07004",
             "name": "гуль штани",
             "price": 3999,
-            "product_type": "pants"
+            "product_type": "pants",
+            "product_info": "я ненавиджу дрейн"
         },
         {
             "product_id": "08001",
@@ -131,7 +133,8 @@
             "product_id": "08004",
             "name": "шарф громадянська війна на трубах",
             "price": 1199,
-            "product_type": "scarf"
+            "product_type": "scarf",
+            "product_info": "мерч приурочений до 100 річчя громадянської війни на трубах між силами тенісних кортів і сакури"
         },
         {
             "product_id": "09001",
