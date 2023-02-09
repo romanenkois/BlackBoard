@@ -1,4 +1,0 @@
-render products in shopping cart 2
-push orders into json
-make admin pannel
-make contacts help info page
