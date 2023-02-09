@@ -4,6 +4,7 @@
     user-select: none;
     border-top: 2px solid var(--darker);
     border-bottom: 2px solid var(--darker);
+    font-family: "gogh", sans-serif;
 }
 
 #filter h3 {
