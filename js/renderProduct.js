@@ -8,7 +8,7 @@ function renderProduct(productId) {
             if (json.products[i].product_id == productId) {
                 document.querySelector("#product-name").innerHTML = json.products[i].name;
                 document.querySelector("#product-price").innerHTML = `${json.products[i].price} грн`;
-                if (json.products[i].description != null) {document.querySelector("#product-info").innerHTML = json.products[i].description;}
+                if (json.products[i].product_info != null) {document.querySelector("#product-info").innerHTML = json.products[i].product_info;}
 
                 fetch(`images/products/${productId}`, { method: 'HEAD' })
                 .then(res => {
