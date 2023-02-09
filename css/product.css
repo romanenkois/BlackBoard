@@ -84,3 +84,21 @@
     transition: 0.1s;
     background-color: var(--primary-hover);
 }
+
+/* */
+
+.question-mark{
+    font-size: 3em;
+    color: var(--light-gray);
+    font-family: "gogh", sans-serif;
+    margin: auto;
+    padding: auto;
+}
+
+.question {
+    font-family: "gogh", sans-serif;
+}
+
+.answer {
+    
+}
