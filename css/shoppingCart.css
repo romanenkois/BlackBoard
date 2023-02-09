@@ -156,6 +156,7 @@
     transition: 0.1s;
     background-color: var(--primary-hover);
 }
+
 .form-input {
     display: block;
     width: 100%;
