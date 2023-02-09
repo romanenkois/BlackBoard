@@ -58,3 +58,9 @@
     text-align: center;
     cursor: help;
 }
+
+.email {
+    text-decoration: underline;
+    cursor: pointer;
+    display: inline;
+}
