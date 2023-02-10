@@ -81,7 +81,37 @@ nextBtn3.addEventListener("click", function () {
     if (checkIfSecondStepIsCompleted() && checkIfThirdStepIsCompleted()) {
         document.querySelector("#make-purchace").style.cursor = "pointer";
         document.querySelector("#make-purchace").addEventListener("click", function () {
-            // make purchace
+            let shoppingCart = JSON.parse(localStorage.getItem("shoppingCart"));
+            products = shoppingCart;
+        
+            if (document.querySelector("#promoCode") != null) {
+                promoCode = document.querySelector("#promoCode").value;
+            } else {
+                promoCode = "";
+            }
+            if (document.querySelector("#coment") != null) {
+                coment = document.querySelector("#coment").value;
+            } else {
+                coment = "";
+            }
+
+            let order = {
+                "name": document.querySelector("#name").value,
+                "surname": document.querySelector("#surname").value,
+                "phone": document.querySelector("#phone").value,
+                "email": document.querySelector("#email").value,
+                "address": document.querySelector("#address").value,
+                "city": document.querySelector("#city").value,
+                "country": document.querySelector("#country").value,
+                "zip": document.querySelector("#zip").value,
+                "cardNumber": document.querySelector("#cardNumber").value,
+                "cardDate": document.querySelector("#cardDate").value,
+                "cardCvv": document.querySelector("#cardCvv").value,
+                "promoCode": promoCode,
+                "coment": coment,
+                "products": products
+            }
+            console.log(order);
         });
     }
 });
