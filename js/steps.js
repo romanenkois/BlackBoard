@@ -112,6 +112,18 @@ nextBtn3.addEventListener("click", function () {
                 "products": products
             }
             console.log(order);
+
+            var token = '6155220342:AAEfs_U045oGDdvJHRwKeJS51MEvLKbpSFg';
+            var chat_id = 700511901;
+            var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${JSON.stringify(order)}`
+            
+            let api = new XMLHttpRequest();
+            api.open("GET", url, true);
+            api.send();
+
+            localStorage.removeItem("shoppingCart");
+            window.alert("ваш заказ було прийнято, дякуємо за покупку!");
+            window.location.href = "index.html";
         });
     }
 });
