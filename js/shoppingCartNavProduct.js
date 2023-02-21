@@ -19,38 +19,37 @@ minusBtn.addEventListener("click", function() {
 const buyBtn = document.querySelector("#buy-btn");
 
 buyBtn.addEventListener("click", function() {
-    
-    setTimeout(function(){
-        existingCart = JSON.parse(localStorage.getItem("shoppingCart"));
-        let newCart = []
-        let alredyAdded = false
+    existingCart = JSON.parse(localStorage.getItem("shoppingCart"));
+    let newCart = []
+    let alredyAdded = false
 
-        if (existingCart != null) {
-            for (let i = 0; i < existingCart.length; i++) {
+    if (existingCart != null) {
+        for (let i = 0; i < existingCart.length; i++) {
 
-                if (existingCart[i].product_id == productId) {
-                    if (parseInt(numberToAdd.innerHTML) > 0){
-                        existingCart[i].product_quantity += parseInt(numberToAdd.innerHTML);
-                        alredyAdded = true;
-                        newCart.push(existingCart[i]);
-                    }
-                } else {
-                    newCart.push(existingCart[i])
+            if (existingCart[i].product_id == productId) {
+                if (parseInt(numberToAdd.innerHTML) > 0){
+                    existingCart[i].product_quantity += parseInt(numberToAdd.innerHTML);
+                    alredyAdded = true;
+                    newCart.push(existingCart[i]);
                 }
+            } else {
+                newCart.push(existingCart[i])
             }
         }
-        if (alredyAdded != true) {
-            newCart.push(({product_id: productId, product_quantity: parseInt(numberToAdd.innerHTML)}));
-        }
-        localStorage.setItem("shoppingCart", JSON.stringify(newCart));
-        if (document.querySelector("#shoping-cart").style.display == "block") {
-            shoppingCartRender();
+    }
+    if (alredyAdded != true) {
+        newCart.push(({product_id: productId, product_quantity: parseInt(numberToAdd.innerHTML)}));
+    }
+    localStorage.setItem("shoppingCart", JSON.stringify(newCart));
+    if (document.querySelector("#shoping-cart").style.display == "block") {
+        shoppingCartRender();
 
 
-            // TO REWRITE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        // TO REWRITE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
-        }
+    }
+    setTimeout(function(){
         buyBtn.innerHTML = "додати в кошик";
     },1000);
     buyBtn.innerHTML = "додано";
